@@ -1,0 +1,59 @@
+:root {
+	font-size: 62.5%;
+
+	--text-xs: 1.3rem;
+	--text-xs: 1.6rem;
+	--text-sm: 1.8rem;
+	--text-md: 2.2rem;
+	--text-lg: 3.6rem;
+	--text-xl: 5.6rem;
+	--text-2xl: 9.6rem;
+}
+
+.level-four-voice {
+	font-size: var(--text-2xl);
+	font-weight: 700;
+	letter-spacing: -.1px;
+}
+
+.level-three-voice {
+	font-size: var(--text-xl);
+}
+
+.level-two-voice {
+	font-size: var(--text-lg);
+}
+
+.level-one-voice {
+	font-size: var(--text-md);
+	font-weight: 400;
+}
+
+.base-voice,
+p,
+li,
+a,
+button {
+	font-size: var(--text-sm);
+}
+
+small,
+.small-voice {
+	font-size: var(--size-xs);
+}
+
+strong {
+	font-weight: bolder;
+}
+
+.tiny-voice {
+	font-size: var(--size-2xs);
+}
+
+:is(.calm-voice, p, li) em {
+	font-style: italic;
+}
+
+:is(.calm-voice, p, li) strong {
+	font-weight: 700;
+}

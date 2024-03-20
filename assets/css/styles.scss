@@ -1,0 +1,61 @@
+.user-button {
+	border-radius: 3px;
+	height: 48px;
+	padding: 6px 15px;
+	margin: 0 20px;
+	font-weight: 600;
+	color: var(--button-text);
+	background-color: var(--button-bg);
+	box-shadow: var(--button-box) 0 4px 9px;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+	display: flex;
+	text-transform: capitalize;
+	transition: background-color .3s ease-in-out, box-shadow .3s ease-in-out;
+
+	cursor: pointer;
+
+	&:hover {
+		background-color: var(--button-bg-hover);
+		box-shadow: var(--button-box-hover) 0 6px 12px;
+	}
+}
+
+.button-filled {
+	border-radius: 3px;
+	height: 48px;
+	width: 100%;
+	padding: 6px 15px;
+	font-weight: 600;
+	color: var(--button-text);
+	background-color: var(--button-bg);
+	box-shadow: var(--button-box) 0 4px 9px;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+	display: flex;
+	border: none;
+	outline: none;
+	cursor: pointer;
+
+	transition: background-color .3s ease-in-out, box-shadow .3s ease-in-out;
+
+	&:hover {
+		background-color: var(--button-bg-hover);
+		box-shadow: var(--button-box-hover) 0 6px 12px;
+	}
+}
+
+.outline-button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	width: 150px;
+	border: 2px solid var(--text-faded);
+	padding: 8px 16px;
+	border-radius: 999px;
+	font-weight: 500;
+	transition: background-color .2s ease-in-out;
+}
