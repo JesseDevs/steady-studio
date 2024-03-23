@@ -14,22 +14,25 @@
 	modal-content {
 		touch-action: manipulation;
 		background-color: var(--background);
+
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
-		width: 90vw;
-		max-width: 360px;
-		height: 100%;
+		width: 100%;
+		// max-width: 360px;
+		height: 45%;
+		min-height: 30vh;
 
 		overflow: hidden;
-		border-right: var(--thin) solid rgb(var(--outline-color-rgb) / 0.5);
+		border-bottom: var(--thin) solid rgb(var(--outline-color-rgb) / 0.5);
 
-		transition: left 0.2s ease;
+		transition: top 0.2s ease-in-out, opacity 0.3s ease;
+
 		position: absolute;
-		top: 0%;
+		top: -100%;
 		bottom: 0;
 		right: 0;
-		left: -100%;
+		left: 0;
 
 		nav {
 			display: flex;
@@ -44,7 +47,7 @@
 
 	glass-container.menu-open {
 		modal-content {
-			left: 0;
+			top: 0;
 		}
 	}
 

@@ -6,7 +6,7 @@
 
 <style lang="scss" scoped>
 	div.space-holder {
-		height: 46px;
+		height: 60px;
 		width: 100%;
 		display: block;
 		background-color: var(--background);

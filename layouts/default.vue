@@ -1,6 +1,7 @@
 <template>
 	<div class="app-container">
 		<LazyModalContainer />
+		<Space />
 		<SiteNav />
 		<main>
 			<slot />
@@ -35,12 +36,5 @@
 	}
 
 	@media (min-width: 850px) {
-	}
-
-	div.space-holder {
-		height: 46px;
-		width: 100%;
-		display: block;
-		background-color: var(--background);
 	}
 </style>

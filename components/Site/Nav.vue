@@ -26,6 +26,11 @@
 
 <style lang="scss">
 	header {
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100%;
+		z-index: 9999;
 		inner-column {
 			padding: 1rem 0.5rem;
 			height: 100%;

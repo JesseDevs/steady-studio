@@ -24,15 +24,15 @@
 
 <style lang="scss">
 	glass-container {
-		height: calc(100% - 60px);
+		min-height: 100%;
 		z-index: 100;
 		display: block;
 		width: 100%;
 		background: var(--color-black-20);
-		transition: opacity 0.3s ease;
+		transition: opacity 0.5s ease;
 		position: fixed;
 
-		bottom: 0;
+		top: 60px;
 		left: 0;
 		right: 0;
 		transform: translateZ(0);

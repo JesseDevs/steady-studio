@@ -140,43 +140,25 @@
 	onMounted(() => {
 		const myAnimation = gsap.timeline();
 
-		myAnimation.timeScale(0.4);
+		myAnimation.timeScale(0.7);
 
 		myAnimation
-			.from('.outer-shell', {
+			.from('.outer-shell g', {
 				opacity: 0,
-				duration: 0.5,
 			})
 			.from(
-				'.mid-shell g:nth-of-type(1)',
+				'.mid-shell g',
 				{
-					opacity: 0,
+					opacity: 0.2,
 					duration: 0.4,
-				},
-				'-=.27',
-			)
-			.from(
-				'.mid-shell g:nth-of-type(2)',
-				{
-					opacity: 0,
-					duration: 0.4,
-					delay: 0.01,
-				},
-				'-=.27',
-			)
-			.from(
-				'.mid-shell g:nth-of-type(3)',
-				{
-					opacity: 0,
-					duration: 0.4,
-					delay: 0.04,
+					stagger: 0.1,
 				},
 				'-=.27',
 			)
 			.from(
 				'.inner-shell',
 				{
-					opacity: 0,
+					opacity: 0.2,
 					duration: 0.4,
 					delay: 0.04,
 				},
@@ -185,12 +167,19 @@
 			.from(
 				'.inner-triangle',
 				{
-					opacity: 0,
+					opacity: 0.2,
 					duration: 0.4,
-					// 			rotate: 360,
-					// transformOrigin: 'center center',
 				},
 				'-=.1',
+			)
+			.from(
+				'.steady path',
+				{
+					opacity: 0,
+					y: '-20%',
+					stagger: 0.1,
+				},
+				'<',
 			);
 	});
 </script>
