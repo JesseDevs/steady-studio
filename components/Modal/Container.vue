@@ -24,15 +24,14 @@
 
 <style lang="scss">
 	glass-container {
-		height: calc(100% - 46px);
+		height: calc(100% - 60px);
 		z-index: 100;
 		display: block;
 		width: 100%;
-		background: var(--color-black-80);
-		transition: opacity 0.8s ease;
+		background: var(--color-black-20);
+		transition: opacity 0.3s ease;
 		position: fixed;
 
-		top: 46px;
 		bottom: 0;
 		left: 0;
 		right: 0;
@@ -45,6 +44,6 @@
 	glass-container.menu-open {
 		opacity: 1;
 		pointer-events: auto;
-		transition: opacity 0.01s ease;
+		transition: opacity 0.1s ease;
 	}
 </style>

@@ -92,42 +92,4 @@
 			}
 		}
 	}
-
-	.palette-button {
-		padding: 8px 16px;
-		border-radius: 3px;
-		display: flex;
-		align-items: center;
-		gap: 8px;
-		width: 100%;
-		background-color: transparent;
-		border: none;
-		outline: none;
-		color: rgba(var(--white-rgb) / 0.65);
-		cursor: pointer;
-		transition: background-color 0.2s ease;
-		p {
-			pointer-events: none;
-		}
-
-		&:hover {
-			background-color: rgba(var(--white-rgb) / 0.09);
-		}
-	}
-
-	p.index-display {
-		text-transform: capitalize;
-		margin-left: auto;
-		position: relative;
-		span {
-			position: absolute;
-		}
-	}
-
-	p.show-theme {
-		padding: 0px 1rem;
-		span {
-			text-transform: capitalize;
-		}
-	}
 </style>

@@ -1,8 +1,7 @@
 <template>
 	<div class="app-container">
-		<SiteNav />
-
 		<LazyModalContainer />
+		<SiteNav />
 		<main>
 			<slot />
 		</main>
