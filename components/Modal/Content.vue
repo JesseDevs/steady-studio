@@ -1,6 +1,22 @@
 <template>
 	<modal-content>
-		<nav><NuxtLink to="/">Services</NuxtLink></nav>
+		<nav>
+			<ul class="modal-btns">
+				<li>
+					<NuxtLink class="level-one-voice" to="/">About</NuxtLink>
+				</li>
+				<li>
+					<NuxtLink class="level-one-voice" to="/">Services</NuxtLink>
+				</li>
+				<li>
+					<NuxtLink class="level-one-voice" to="/">Projects</NuxtLink>
+				</li>
+
+				<li>
+					<NuxtLink class="level-one-voice" to="/">Get in touch</NuxtLink>
+				</li>
+			</ul>
+		</nav>
 	</modal-content>
 </template>
 
@@ -20,13 +36,13 @@
 		justify-content: space-between;
 		width: 100%;
 		// max-width: 360px;
-		height: 45%;
+		height: 40%;
 		min-height: 30vh;
 
 		overflow: hidden;
 		border-bottom: var(--thin) solid rgb(var(--outline-color-rgb) / 0.5);
 
-		transition: top 0.2s ease-in-out, opacity 0.3s ease;
+		transition: top 0.3s ease-in-out, opacity 0.3s ease;
 
 		position: absolute;
 		top: -100%;
@@ -45,53 +61,48 @@
 		}
 	}
 
+	.modal-btns {
+		padding-top: 1em;
+		display: flex;
+		align-items: flex-start;
+		flex-direction: column;
+		gap: 5px;
+		height: 100%;
+		li {
+			width: 100%;
+			a {
+				opacity: 0;
+				display: block;
+				width: 100%;
+				padding: 8px 16px;
+				font-weight: 500;
+			}
+		}
+
+		li:last-of-type {
+			align-self: flex-end;
+			width: auto;
+			margin-top: auto;
+			padding-right: 15px;
+			padding-bottom: 2rem;
+			a {
+				border-radius: 999px;
+				padding: 12px 24px;
+				width: fit-content;
+				color: var(--white-text);
+				background-color: var(--brand-color);
+			}
+		}
+	}
+
 	glass-container.menu-open {
 		modal-content {
 			top: 0;
 		}
-	}
-
-	.modal-BTNs {
-		padding: 16px;
-		display: flex;
-
-		flex-direction: column;
-		gap: 16px;
-		a {
-			border-radius: 3px;
-			height: 48px;
-			padding: 6px 15px;
-			font-weight: 600;
-			color: var(--button-text);
-			background-color: var(--button-bg);
-			box-shadow: var(--button-box) 0 4px 9px;
-			justify-content: center;
-			align-items: center;
-			text-decoration: none;
-			display: flex;
-			text-transform: capitalize;
-
-			transition: background-color 0.3s ease-in-out;
-			&:hover {
-				background-color: var(--button-bg-hover);
-				box-shadow: var(--button-box-hover) 0 6px 12px;
-			}
-		}
-
-		.button-filled {
-			color: var(--button-text);
-			background-color: var(--button-bg);
-			box-shadow: var(--button-box) 0 4px 9px;
-
-			width: 100%;
-			appearance: none;
-			border: none;
-			outline: none;
-
-			transition: background-color 0.3s ease-in-out;
-			&:hover {
-				background-color: var(--button-bg-hover);
-				box-shadow: var(--button-box-hover) 0 6px 12px;
+		.modal-btns {
+			a {
+				transition: opacity 0.7s ease;
+				opacity: 1;
 			}
 		}
 	}

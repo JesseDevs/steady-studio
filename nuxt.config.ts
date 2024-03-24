@@ -71,6 +71,10 @@ export default defineNuxtConfig({
 				wght: '100..900',
 				ital: '100..700',
 			},
+			'Noto Serif': {
+				wght: '100..900',
+				ital: '100..700',
+			},
 		},
 		display: 'block',
 	},

@@ -23,7 +23,8 @@ body {
 	background-color: var(--background);
 	color: var(--text);
 	font-family: 'Inter', sans-serif;
-	font-weight: 400;
+	/* font-family: "Noto Serif", serif; */
+	font-weight: 300;
 	line-height: 1.4;
 	font-style: normal;
 }
