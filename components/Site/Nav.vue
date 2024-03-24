@@ -31,8 +31,11 @@
 		top: 0;
 		width: 100%;
 		z-index: 9999;
+
+		background-color: var(--background);
+
 		inner-column {
-			padding: 1rem 0.5rem;
+			padding: 1rem 1rem;
 			height: 100%;
 			max-width: none;
 

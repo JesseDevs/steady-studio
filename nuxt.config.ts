@@ -5,7 +5,7 @@ export default defineNuxtConfig({
 	app: {
 		pageTransition: { name: 'page', mode: 'out-in' },
 		head: {
-			title: '2v2 Agency',
+			title: 'Steady Web Agency',
 
 			meta: [
 				{ charset: 'utf-8' },
@@ -66,11 +66,10 @@ export default defineNuxtConfig({
 	googleFonts: {
 		preload: true,
 		families: {
-			'Roboto+Slab': [100, 200, 300, 400, 500, 600, 700, 800, 900],
-			'DM+Sans': [100, 200, 300, 400, 500, 600, 700, 800, 900],
-			Montserrat: {
-				wght: [100, 200, 300, 400, 500, 600, 700, 800, 900],
-				ital: [100, 200, 300, 400, 500, 600, 700, 800, 900],
+			Inter: '100..700',
+			'Crimson Pro': {
+				wght: '100..900',
+				ital: '100..700',
 			},
 		},
 		display: 'block',

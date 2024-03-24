@@ -1,6 +1,6 @@
 <template>
 	<modal-content>
-		<nav></nav>
+		<nav><NuxtLink to="/">Services</NuxtLink></nav>
 	</modal-content>
 </template>
 

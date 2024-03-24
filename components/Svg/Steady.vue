@@ -20,13 +20,7 @@
 				class="Artboard1"
 				transform="matrix(0.954039,0,0,0.982603,-0.574583,-0.0492822)"
 			>
-				<rect
-					x="0.602"
-					y="0.05"
-					width="229.56"
-					height="61.984"
-					style="fill: var(--background)"
-				/>
+				<rect x="0.602" y="0.05" width="229.56" height="61.984" fill="none" />
 				<g
 					class="steady"
 					transform="matrix(1.34142,0,0,1.01771,-119.228,-84.5625)"
