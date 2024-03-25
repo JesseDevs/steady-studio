@@ -179,6 +179,10 @@
 </script>
 
 <style lang="scss" scoped>
+	div {
+		display: flex;
+		align-items: flex-start;
+	}
 	svg {
 		max-height: 40px;
 		.steady {

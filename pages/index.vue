@@ -1,6 +1,6 @@
 <template>
 	<GeneralContainer>
-		<p>Steady</p>
+		<BlockTitle />
 	</GeneralContainer>
 </template>
 
