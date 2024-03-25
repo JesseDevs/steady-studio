@@ -81,7 +81,7 @@
 			}
 
 			span {
-				background-color: var(--brand-color);
+				background-color: rgb(var(--black-rgb) / 0.8);
 				transform-origin: 50% center;
 				opacity: 1;
 				border-radius: var(--thin);

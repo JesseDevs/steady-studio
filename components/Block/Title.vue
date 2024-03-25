@@ -4,9 +4,13 @@
 		<h1 class="level-three-voice container">
 			<span class="span-one">Steady.</span>
 			<span class="span-two">Resilient.</span>
-			<span class="span-three">Driven.</span>
-			<span class="span-four">Grounded.</span>
+			<span class="span-three">Grounded.</span>
+			<span class="span-four">Driven.</span>
 		</h1>
+		<p>
+			A studio built to craft compelling digital experiences that captivate
+			audiences and drive business growth.
+		</p>
 	</block-title>
 </template>
 
@@ -38,7 +42,7 @@
 				},
 				{
 					top: -spanHeight,
-					delay: 1,
+					delay: 2.5,
 				},
 			)
 			.fromTo(
@@ -51,6 +55,7 @@
 					opacity: 1,
 					top: 0,
 				},
+				'<',
 			)
 
 			.fromTo(
@@ -75,6 +80,7 @@
 					opacity: 1,
 					top: 0,
 				},
+				'<',
 			)
 
 			.fromTo(
@@ -99,6 +105,7 @@
 					opacity: 1,
 					top: 0,
 				},
+				'<',
 			)
 
 			.fromTo(
@@ -145,6 +152,10 @@
 			// .span-one {
 			// 	top: 0;
 			// }
+		}
+
+		p {
+			padding-top: 25px;
 		}
 	}
 </style>

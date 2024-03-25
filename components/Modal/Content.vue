@@ -3,13 +3,24 @@
 		<nav>
 			<ul class="modal-btns">
 				<li>
-					<NuxtLink class="level-one-voice" to="/">About</NuxtLink>
+					<NuxtLink class="level-one-voice" to="/">
+						About
+						<Icon name="ph:arrow-circle-down-right-light" size="30" />
+					</NuxtLink>
 				</li>
 				<li>
-					<NuxtLink class="level-one-voice" to="/">Services</NuxtLink>
+					<NuxtLink class="level-one-voice" to="/"
+						>Services
+
+						<Icon name="ph:arrow-circle-down-right-light" size="30" />
+					</NuxtLink>
 				</li>
 				<li>
-					<NuxtLink class="level-one-voice" to="/">Projects</NuxtLink>
+					<NuxtLink class="level-one-voice" to="/"
+						>Projects
+
+						<Icon name="ph:arrow-circle-down-right-light" size="30" />
+					</NuxtLink>
 				</li>
 
 				<li>
@@ -74,8 +85,24 @@
 				opacity: 0;
 				display: block;
 				width: 100%;
-				padding: 8px 16px;
-				font-weight: 500;
+				padding: 8px 1rem;
+				font-weight: 600;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+
+				svg {
+					transition: transform 0.3s ease;
+					transform: rotate(90deg);
+					stroke: var(--black);
+					stroke-width: 6px;
+				}
+
+				&:hover {
+					svg {
+						transform: rotate(-45deg);
+					}
+				}
 			}
 		}
 
@@ -87,10 +114,16 @@
 			padding-bottom: 2rem;
 			a {
 				border-radius: 999px;
-				padding: 12px 24px;
+				padding: 12px 36px;
 				width: fit-content;
 				color: var(--white-text);
-				background-color: var(--brand-color);
+				font-weight: 300;
+
+				background-color: rgb(142, 81, 136);
+
+				&:hover {
+					background-color: rgb(110, 54, 104);
+				}
 			}
 		}
 	}
@@ -101,7 +134,7 @@
 		}
 		.modal-btns {
 			a {
-				transition: opacity 0.7s ease;
+				transition: opacity 0.7s ease, background-color 0.3s ease;
 				opacity: 1;
 			}
 		}

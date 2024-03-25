@@ -185,6 +185,7 @@
 	}
 	svg {
 		max-height: 40px;
+		max-width: 152px;
 		.steady {
 			display: inline;
 			fill: var(--brand-color);
