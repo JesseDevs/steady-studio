@@ -1,5 +1,6 @@
 <template>
 	<block-title>
+		<SvgLogo />
 		<h1 class="level-three-voice">Stay</h1>
 		<h1 class="level-three-voice container">
 			<span class="span-one">Steady.</span>
@@ -135,11 +136,12 @@
 			flex-direction: column;
 			width: 100%;
 			font-weight: 700;
+			max-width: fit-content;
 		}
 
 		h1.container {
 			height: 78.4px;
-
+			max-width: none;
 			position: relative;
 			overflow: hidden;
 			span {
