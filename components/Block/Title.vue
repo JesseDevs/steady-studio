@@ -15,7 +15,7 @@
 			audiences and drive business growth.
 		</p>
 
-		<NuxtLink to="/" class="contact-link">
+		<NuxtLink to="/" class="contact-link level-one-voice">
 			Let's Talk
 			<Icon
 				name="material-symbols:arrow-right-alt"
@@ -30,15 +30,20 @@
 
 <script setup>
 	import { gsap } from 'gsap';
+	import { useWindowSize } from '@vueuse/core';
+	const { width, height } = useWindowSize();
+
+	const spanHeight = computed(() => {
+		return width.value > 500 && width.value !== Infinity ? '115.2' : '67.2';
+	});
 
 	onMounted(() => {
-		const spanHeight = 78.4;
 		const tl = gsap.timeline({ repeat: -1 });
 
 		tl.fromTo(
 			'.span-one',
 			{
-				top: spanHeight,
+				top: spanHeight.value,
 				ease: 'power4.out',
 			},
 			{
@@ -55,14 +60,14 @@
 					ease: 'power4.out',
 				},
 				{
-					top: -spanHeight,
+					top: -spanHeight.value,
 					delay: 2.5,
 				},
 			)
 			.fromTo(
 				'.span-two',
 				{
-					top: spanHeight,
+					top: spanHeight.value,
 					ease: 'power4.out',
 				},
 				{
@@ -80,14 +85,14 @@
 					ease: 'power4.out',
 				},
 				{
-					top: -spanHeight,
+					top: -spanHeight.value,
 					delay: 1,
 				},
 			)
 			.fromTo(
 				'.span-three',
 				{
-					top: spanHeight,
+					top: spanHeight.value,
 					ease: 'power4.out',
 				},
 				{
@@ -105,14 +110,14 @@
 					ease: 'power4.out',
 				},
 				{
-					top: -spanHeight,
+					top: -spanHeight.value,
 					delay: 1,
 				},
 			)
 			.fromTo(
 				'.span-four',
 				{
-					top: spanHeight,
+					top: spanHeight.value,
 					ease: 'power4.out',
 				},
 				{
@@ -130,7 +135,7 @@
 					ease: 'power4.out',
 				},
 				{
-					top: -spanHeight,
+					top: -spanHeight.value,
 					delay: 1,
 				},
 			);
@@ -152,27 +157,26 @@
 			font-weight: 700;
 			max-width: fit-content;
 			position: relative;
+			line-height: 1.2;
 		}
 
 		h1.container {
-			height: 78.4px;
+			height: 67.2px;
 			max-width: none;
 
 			overflow: hidden;
 			span {
 				display: block;
-				top: 78.4px;
+				top: 67.2px;
 				opacity: 0;
 				left: 0;
 				position: absolute;
 			}
-			// .span-one {
-			// 	top: 0;
-			// }
 		}
 
 		p {
 			padding-top: 25px;
+			max-width: 30ch;
 		}
 
 		.contact-link {
@@ -196,14 +200,14 @@
 			.line-support {
 				position: absolute;
 				width: 100%;
-				bottom: -40px;
+				bottom: -45px;
 				left: -10px;
 			}
 
 			&:after {
 				content: '';
 				position: absolute;
-				transition: left 0.3s ease-in;
+				transition: left 0.4s ease-in-out;
 				bottom: -30px;
 				left: -10px;
 				background-color: rgb(var(--background-rgb) / 0.5);
@@ -220,11 +224,32 @@
 				}
 			}
 		}
+
+		@media (min-width: 500px) {
+			h1.level-three-voice {
+				font-size: var(--text-2xl);
+			}
+			h1.container {
+				height: 115.4px;
+			}
+			p {
+				margin-left: 3em;
+			}
+
+			// .contact-link {
+			// 	margin-left: 3em;
+			// }
+		}
 	}
 
 	.logo-container {
 		position: absolute;
-		top: 0;
-		right: -150px;
+		top: -125px;
+		right: -210px;
+
+		@media (min-width: 500px) {
+			top: -75px;
+			right: -300px;
+		}
 	}
 </style>

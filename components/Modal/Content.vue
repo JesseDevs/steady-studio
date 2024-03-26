@@ -149,7 +149,7 @@
 		left: -100%;
 		width: 100%;
 		height: 100%;
-		background-color: rgb(var(--brand-color-rgb) / 0.5);
+		background-color: rgb(var(--brand-color-rgb) / 0.3);
 		transition: left 0.3s ease-in;
 		z-index: 0;
 	}

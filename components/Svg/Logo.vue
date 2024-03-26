@@ -39,6 +39,7 @@
 				<path d="M13.26,8.039L13.32,35.392L36.764,21.526L13.26,8.039Z" />
 				<path
 					d="M18.937,18.279L18.963,25.359L25.269,21.6L18.937,18.279Z"
+					class="no-shake"
 					style="fill: var(--background)"
 				/>
 				<path d="M19.975,19.744L20.06,23.698L23.604,21.628L19.975,19.744Z" />
@@ -54,23 +55,44 @@
 <script setup>
 	import { gsap } from 'gsap';
 
+	function shake(element) {
+		gsap.to(element, {
+			x: -0.6,
+			duration: 0.03,
+			repeat: 0.5,
+			yoyo: true,
+			onComplete: () => {
+				gsap.set(element, { x: 0 });
+			},
+		});
+	}
+
 	onMounted(() => {
 		const tl = gsap.timeline();
 
 		tl.from('.logo-symbol', {
-			delay: 1.5,
+			delay: 1,
 			opacity: 0,
 			rotate: 0,
 			scale: 0.5,
 			transformOrigin: 'center',
 			ease: 'power1.inOut',
-		});
+		}).from(
+			'.logo-container',
+			{
+				delay: 0.8,
+				duration: 3,
+				transformOrigin: 'center',
+				rotate: 180,
+			},
+			'<',
+		);
 
-		// .to('.logo-symbol', {
-		// 	rotate: 360,
-		// 	duration: 5,
-		// 	ease: 'none',
-		// });
+		document.querySelectorAll('.logo-symbol  path:not(.no-shake)').forEach((path) => {
+			path.addEventListener('mouseenter', () => {
+				shake(path);
+			});
+		});
 	});
 </script>
 
@@ -80,20 +102,29 @@
 		align-items: flex-start;
 	}
 	svg {
-		max-width: 80px;
-		max-height: 80px;
+		max-width: 200px;
+		max-height: 200px;
 
 		.steady {
 			display: inline;
-			fill: var(--brand-color);
+			fill: rgb(var(--brand-color-rgb) / 0.3);
 			path {
-				stroke: var(--brand-color);
+				stroke: rgb(var(--brand-color-rgb) / 0.3);
 			}
 		}
 	}
 	.logo-symbol {
 		path {
-			fill: var(--brand-color);
+			transition: fill 0.2s ease-in-out;
+			fill: rgb(var(--brand-color-rgb) / 0.3);
+		}
+	}
+
+	svg {
+		@media (hover: hover) {
+			.logo-symbol path:hover {
+				fill: rgb(var(--brand-color-rgb) / 1);
+			}
 		}
 	}
 </style>

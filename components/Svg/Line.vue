@@ -28,7 +28,7 @@
 			<path
 				id="line"
 				d="M0.748,2.948L8.584,0.953L7.446,3.572L18.434,1.543"
-				style="fill: none; stroke: var(--brand-color); stroke-width: 0.5px"
+				style="fill: none; stroke: var(--brand-color); stroke-width: 0.3px"
 			/>
 		</svg>
 	</div>
