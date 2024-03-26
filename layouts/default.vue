@@ -3,9 +3,9 @@
 		<LazyModalContainer />
 		<Space />
 		<SiteNav />
-		<main>
-			<slot />
-		</main>
+
+		<slot />
+
 		<SiteFooter />
 	</div>
 </template>
@@ -17,7 +17,7 @@
 	onMounted(() => {});
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 	.app-container {
 		display: flex;
 		flex-direction: column;
@@ -25,10 +25,6 @@
 
 		main {
 			min-height: 100vh;
-
-			section {
-				overflow-y: hidden;
-			}
 		}
 	}
 

@@ -1,8 +1,12 @@
 <template>
-	<GeneralContainer>
-		<BlockTitle />
-	</GeneralContainer>
-	<GeneralContainer> </GeneralContainer>
+	<main>
+		<GeneralContainer>
+			<BlockTitle />
+		</GeneralContainer>
+		<GeneralContainer>
+			<BlockAbout />
+		</GeneralContainer>
+	</main>
 </template>
 
 <script setup>
