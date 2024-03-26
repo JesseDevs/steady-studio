@@ -21,11 +21,11 @@
 
 		box-cards {
 			display: flex;
-			gap: 1.25rem;
+			gap: 1.6rem;
 			position: absolute;
 			top: 50%;
-			left: -150px;
-			transform: translate(-30%, -50%);
+			left: -45%;
+			transform: translate(0%, -50%);
 
 			div {
 				display: flex;

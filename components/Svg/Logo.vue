@@ -107,11 +107,25 @@
 		.logo-symbol {
 			path {
 				transition: fill 0.2s ease-in-out;
-				fill: rgb(var(--brand-color-rgb) / 0.3);
+				fill: rgb(var(--brand-color-rgb) / 1); // Default fill opacity
+			}
+		}
+		@media (hover: none) {
+			.logo-symbol path {
+				fill: rgb(
+					var(--brand-color-rgb) / 1
+				); // Fill opacity for devices without hover
 			}
 		}
 		@media (hover: hover) {
-			.logo-symbol path:hover {
+			.logo-symbol path {
+				fill: rgb(
+					var(--brand-color-rgb) / 0.3
+				); // Fill opacity for devices with hover
+			}
+		}
+		.logo-symbol {
+			path:hover {
 				fill: rgb(var(--brand-color-rgb) / 1);
 			}
 		}

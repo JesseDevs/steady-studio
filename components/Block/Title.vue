@@ -299,15 +299,6 @@
 	}
 
 	@media (min-width: 800px) {
-		h1:not(.container) {
-			// position: static;
-
-			// .logo-container {
-			// 	top: -125px;
-			// 	right: -40px;
-			// 	z-index: 3;
-			// }
-		}
 		.triangle {
 			opacity: 1;
 		}

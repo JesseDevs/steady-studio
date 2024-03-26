@@ -3,7 +3,7 @@
 		<GeneralContainer>
 			<BlockTitle />
 		</GeneralContainer>
-		<GeneralContainer>
+		<GeneralContainer class="about">
 			<BlockAbout />
 		</GeneralContainer>
 	</main>
@@ -23,4 +23,8 @@
 	});
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+	// .about {
+	// 	background-color: var(--support-color);
+	// }
+</style>
