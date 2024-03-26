@@ -26,16 +26,10 @@
 			<SvgLine class="line-support" />
 		</NuxtLink>
 
-		<picture>
+		<picture class="hero-vid-container">
 			<SvgTriangle class="triangle" />
-			<video
-				autoplay
-				muted
-				loop
-				playsinline
-				class="hero-vid"
-				src="/steady-vid.mp4"
-			></video>
+			<div class="overlay"></div>
+			<video autoplay muted loop playsinline src="/steady-vid.mp4"></video>
 		</picture>
 	</block-title>
 </template>
@@ -255,22 +249,32 @@
 		}
 	}
 
-	picture {
+	.hero-vid-container {
 		opacity: 0;
-		display: none;
 		position: absolute;
-		top: 0;
-		right: -10px;
-		aspect-ratio: 16/9;
-		max-height: 600px;
-		width: 50vw;
+		top: 10%;
+		left: 45%;
+
+		max-height: 500px;
+		width: 65vw;
 		max-width: 650px;
 		height: auto;
-
+		background-color: var(--background);
 		transition-duration: 1s;
 		z-index: -1;
+		rotate: 90deg;
 		video {
-			object-fit: cover;
+			object-fit: contain;
+			mix-blend-mode: overlay;
+		}
+		.overlay {
+			background: var(--background);
+
+			background: radial-gradient(
+				at center,
+				#633a8b4d,
+				rgb(var(--background-rgb) / 1)
+			);
 		}
 	}
 
@@ -296,21 +300,20 @@
 
 	@media (min-width: 800px) {
 		h1:not(.container) {
-			position: static;
+			// position: static;
 
-			.logo-container {
-				top: -125px;
-				right: -40px;
-				z-index: 3;
-			}
+			// .logo-container {
+			// 	top: -125px;
+			// 	right: -40px;
+			// 	z-index: 3;
+			// }
 		}
 		.triangle {
 			opacity: 1;
 		}
-		picture {
+		.hero-vid-container {
 			opacity: 0.5;
 			display: block;
-			z-index: 2;
 		}
 	}
 </style>

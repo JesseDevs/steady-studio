@@ -25,6 +25,9 @@
 
 		main {
 			min-height: 100vh;
+			section {
+				overflow: hidden;
+			}
 		}
 	}
 
