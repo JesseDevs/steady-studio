@@ -57,8 +57,8 @@
 
 	function shake(element) {
 		gsap.to(element, {
-			x: -0.6,
-			duration: 0.03,
+			x: -0.3,
+			duration: 0.04,
 			repeat: 0.5,
 			yoyo: true,
 			onComplete: () => {
@@ -104,26 +104,25 @@
 	svg {
 		max-width: 200px;
 		max-height: 200px;
-
-		.steady {
-			display: inline;
-			fill: rgb(var(--brand-color-rgb) / 0.3);
+		.logo-symbol {
 			path {
-				stroke: rgb(var(--brand-color-rgb) / 0.3);
+				transition: fill 0.2s ease-in-out;
+				fill: rgb(var(--brand-color-rgb) / 0.3);
 			}
 		}
-	}
-	.logo-symbol {
-		path {
-			transition: fill 0.2s ease-in-out;
-			fill: rgb(var(--brand-color-rgb) / 0.3);
-		}
-	}
-
-	svg {
 		@media (hover: hover) {
 			.logo-symbol path:hover {
 				fill: rgb(var(--brand-color-rgb) / 1);
+			}
+		}
+	}
+
+	@media (min-width: 800px) {
+		svg {
+			.logo-symbol {
+				path {
+					fill: rgb(var(--brand-color-rgb) / 0.6);
+				}
 			}
 		}
 	}

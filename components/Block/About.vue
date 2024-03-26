@@ -25,10 +25,8 @@
 			position: absolute;
 			top: 50%;
 			left: -150px;
-			// --tw-translate-y: -50%;
-			// transform: translate(var(--tw-translate-x), var(--tw-translate-y))
-			// 	rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y))
-			// 	scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+			transform: translate(-30%, -50%);
+
 			div {
 				display: flex;
 				height: 30vw;

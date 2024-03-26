@@ -27,6 +27,7 @@
 		</NuxtLink>
 
 		<picture>
+			<SvgTriangle class="triangle" />
 			<video
 				autoplay
 				muted
@@ -159,6 +160,7 @@
 		width: 100%;
 		position: relative;
 		margin-top: 100px;
+		padding-bottom: 50px;
 
 		h1 {
 			letter-spacing: -0.05em;
@@ -255,13 +257,16 @@
 
 	picture {
 		opacity: 0;
+		display: none;
 		position: absolute;
 		top: 0;
 		right: -10px;
-
-		max-width: 60%;
-		height: auto;
 		aspect-ratio: 16/9;
+		max-height: 600px;
+		width: 50vw;
+		max-width: 650px;
+		height: auto;
+
 		transition-duration: 1s;
 		z-index: -1;
 		video {
@@ -280,6 +285,15 @@
 		}
 	}
 
+	.triangle {
+		position: absolute;
+		bottom: -50%;
+		right: -60px;
+		opacity: 0;
+		z-index: 10;
+		display: none;
+	}
+
 	@media (min-width: 800px) {
 		h1:not(.container) {
 			position: static;
@@ -287,10 +301,16 @@
 			.logo-container {
 				top: -125px;
 				right: -40px;
+				z-index: 3;
 			}
+		}
+		.triangle {
+			opacity: 1;
 		}
 		picture {
 			opacity: 0.5;
+			display: block;
+			z-index: 2;
 		}
 	}
 </style>
