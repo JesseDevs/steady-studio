@@ -10,7 +10,7 @@
 				>
 					<div class="mbykw">
 						<span></span>
-						<span></span>
+
 						<span></span>
 					</div>
 				</button>
@@ -65,7 +65,7 @@
 				justify-content: center;
 				align-items: center;
 
-				width: 40px;
+				width: 45px;
 				height: 40px;
 				margin-left: 0px;
 				transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s;
@@ -75,8 +75,8 @@
 				span:first-child {
 					transform: translateY(-6px);
 				}
-				span:nth-child(3) {
-					transform: translateY(6px);
+				span:nth-child(2) {
+					transform: translateY(3px);
 				}
 			}
 
@@ -103,10 +103,8 @@
 			span:first-child {
 				transform: rotate(45deg);
 			}
+
 			span:nth-child(2) {
-				opacity: 0;
-			}
-			span:nth-child(3) {
 				transform: rotate(-45deg);
 			}
 		}

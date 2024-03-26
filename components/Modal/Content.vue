@@ -24,7 +24,10 @@
 				</li>
 
 				<li>
-					<NuxtLink class="level-one-voice" to="/">Get in touch</NuxtLink>
+					<NuxtLink class="level-one-voice loading-link" to="/"
+						><span>Get in touch</span>
+						<Icon name="ph:arrow-circle-down-right-light" size="30" />
+					</NuxtLink>
 				</li>
 			</ul>
 		</nav>
@@ -73,8 +76,9 @@
 	}
 
 	.modal-btns {
-		padding-top: 1em;
 		display: flex;
+		justify-content: center;
+		padding-bottom: 50px;
 		align-items: flex-start;
 		flex-direction: column;
 		gap: 5px;
@@ -85,7 +89,7 @@
 				opacity: 0;
 				display: block;
 				width: 100%;
-				padding: 8px 1rem;
+				padding: 8px 1.5rem;
 				font-weight: 600;
 				display: flex;
 				align-items: center;
@@ -107,22 +111,11 @@
 		}
 
 		li:last-of-type {
-			align-self: flex-end;
-			width: auto;
-			margin-top: auto;
-			padding-right: 15px;
-			padding-bottom: 2rem;
 			a {
-				border-radius: 999px;
-				padding: 12px 36px;
-				width: fit-content;
-				color: var(--white-text);
-				font-weight: 300;
-
-				background-color: rgb(142, 81, 136);
-
-				&:hover {
-					background-color: rgb(110, 54, 104);
+				svg {
+					transition: transform 0.3s ease, opacity 0.5s ease;
+					opacity: 0.1;
+					transform: rotate(-45deg);
 				}
 			}
 		}
@@ -137,6 +130,36 @@
 				transition: opacity 0.7s ease, background-color 0.3s ease;
 				opacity: 1;
 			}
+		}
+	}
+
+	.loading-link {
+		position: relative;
+		overflow: hidden;
+		z-index: 1;
+		span {
+			z-index: 10;
+		}
+	}
+
+	.loading-link::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: -100%;
+		width: 100%;
+		height: 100%;
+		background-color: rgb(var(--brand-color-rgb) / 0.5);
+		transition: left 0.3s ease-in;
+		z-index: 0;
+	}
+
+	.loading-link:hover {
+		svg {
+			opacity: 1 !important;
+		}
+		&:before {
+			left: 0;
 		}
 	}
 </style>

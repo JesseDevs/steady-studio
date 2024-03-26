@@ -2,6 +2,7 @@
 	<GeneralContainer>
 		<BlockTitle />
 	</GeneralContainer>
+	<GeneralContainer> </GeneralContainer>
 </template>
 
 <script setup>
