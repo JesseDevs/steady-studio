@@ -81,9 +81,9 @@
 			'.logo-container',
 			{
 				delay: 0.8,
-				duration: 3,
+				duration: 2,
 				transformOrigin: 'center',
-				rotate: 180,
+				rotate: 118,
 			},
 			'<',
 		);

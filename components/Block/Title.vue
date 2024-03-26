@@ -25,6 +25,17 @@
 			/>
 			<SvgLine class="line-support" />
 		</NuxtLink>
+
+		<picture>
+			<video
+				autoplay
+				muted
+				loop
+				playsinline
+				class="hero-vid"
+				src="/steady-vid.mp4"
+			></video>
+		</picture>
 	</block-title>
 </template>
 
@@ -34,7 +45,7 @@
 	const { width, height } = useWindowSize();
 
 	const spanHeight = computed(() => {
-		return width.value > 500 && width.value !== Infinity ? '115.2' : '67.2';
+		return width.value > 498 && width.value !== Infinity ? '115.2' : '67.2';
 	});
 
 	onMounted(() => {
@@ -147,7 +158,7 @@
 		display: block;
 		width: 100%;
 		position: relative;
-		padding-top: 100px;
+		margin-top: 100px;
 
 		h1 {
 			letter-spacing: -0.05em;
@@ -242,6 +253,22 @@
 		}
 	}
 
+	picture {
+		opacity: 0;
+		position: absolute;
+		top: 0;
+		right: -10px;
+
+		max-width: 60%;
+		height: auto;
+		aspect-ratio: 16/9;
+		transition-duration: 1s;
+		z-index: -1;
+		video {
+			object-fit: cover;
+		}
+	}
+
 	.logo-container {
 		position: absolute;
 		top: -125px;
@@ -249,7 +276,21 @@
 
 		@media (min-width: 500px) {
 			top: -75px;
-			right: -300px;
+			right: -280px;
+		}
+	}
+
+	@media (min-width: 800px) {
+		h1:not(.container) {
+			position: static;
+
+			.logo-container {
+				top: -125px;
+				right: -40px;
+			}
+		}
+		picture {
+			opacity: 0.5;
 		}
 	}
 </style>
