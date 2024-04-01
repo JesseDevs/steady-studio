@@ -42,11 +42,11 @@
 					class="no-shake"
 					style="fill: var(--background)"
 				/>
-				<path d="M19.975,19.744L20.06,23.698L23.604,21.628L19.975,19.744Z" />
+				<path d="M19.636,19.495L19.636,24.086L23.781,21.606L19.636,19.495Z" />
 
-				<path d="M19.931,3.84L30.298,9.954L25.063,0.898L19.931,3.84Z" />
-				<path d="M26.725,35.402L37.048,29.383L37.048,35.402L26.725,35.402Z" />
-				<path d="M6.3,19.137L6.3,31.752L0.876,28.489L6.3,19.137Z" />
+				<path d="M19.594,4.033L30.496,10.152L25.063,0.898L19.594,4.033Z" />
+				<path d="M26.264,35.564L37.048,29.061L37.048,35.402L26.264,35.564Z" />
+				<path d="M6.604,18.715L6.604,31.827L0.876,28.489L6.604,18.715Z" />
 			</g>
 		</svg>
 	</div>
@@ -110,20 +110,6 @@
 				fill: rgb(var(--brand-color-rgb) / 1); // Default fill opacity
 			}
 		}
-		@media (hover: none) {
-			.logo-symbol path {
-				fill: rgb(
-					var(--brand-color-rgb) / 1
-				); // Fill opacity for devices without hover
-			}
-		}
-		@media (hover: hover) {
-			.logo-symbol path {
-				fill: rgb(
-					var(--brand-color-rgb) / 0.3
-				); // Fill opacity for devices with hover
-			}
-		}
 		.logo-symbol {
 			path:hover {
 				fill: rgb(var(--brand-color-rgb) / 1);
@@ -135,7 +121,7 @@
 		svg {
 			.logo-symbol {
 				path {
-					fill: rgb(var(--brand-color-rgb) / 0.6);
+					fill: rgb(var(--brand-color-rgb) / 1);
 				}
 			}
 		}

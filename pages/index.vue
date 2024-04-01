@@ -1,7 +1,7 @@
 <template>
 	<main>
 		<GeneralContainer>
-			<BlockTitle />
+			<BlockLanding />
 		</GeneralContainer>
 		<GeneralContainer class="about">
 			<BlockAbout />
