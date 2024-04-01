@@ -10,7 +10,6 @@
 				>
 					<div class="mbykw">
 						<span></span>
-
 						<span></span>
 					</div>
 				</button>
@@ -81,7 +80,7 @@
 			}
 
 			span {
-				background-color: rgb(var(--black-rgb) / 0.8);
+				background-color: rgb(var(--text-rgb) / 0.8);
 				transform-origin: 50% center;
 				opacity: 1;
 				border-radius: var(--thin);
@@ -98,7 +97,7 @@
 		div.mbykw {
 			opacity: 1;
 			span {
-				background-color: black;
+				background-color: rgb(var(--text-rgb) / 1);
 			}
 			span:first-child {
 				transform: rotate(45deg);

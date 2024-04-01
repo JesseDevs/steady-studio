@@ -26,7 +26,10 @@
 				<li>
 					<NuxtLink class="level-one-voice loading-link" to="/"
 						><span>Get in touch</span>
-						<Icon name="ph:arrow-circle-down-right-light" size="30" />
+						<Icon
+							name="material-symbols-light:arrow-outward-rounded"
+							size="30"
+						/>
 					</NuxtLink>
 				</li>
 			</ul>
@@ -98,8 +101,9 @@
 				svg {
 					transition: transform 0.3s ease;
 					transform: rotate(90deg);
-					stroke: var(--black);
+					stroke: var(--text);
 					stroke-width: 6px;
+					outline: none;
 				}
 
 				&:hover {
@@ -115,7 +119,8 @@
 				svg {
 					transition: transform 0.3s ease, opacity 0.5s ease;
 					opacity: 0.1;
-					transform: rotate(-45deg);
+					stroke-width: 2px;
+					transform: rotate(0);
 				}
 			}
 		}
@@ -149,7 +154,7 @@
 		left: -100%;
 		width: 100%;
 		height: 100%;
-		background-color: rgb(var(--brand-color-rgb) / 0.3);
+		background-color: rgb(var(--accent-color-rgb) / 0.5);
 		transition: left 0.3s ease-in;
 		z-index: 0;
 	}
