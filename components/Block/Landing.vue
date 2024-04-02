@@ -126,7 +126,7 @@
 		border-radius: 7px;
 		object-fit: cover;
 		mix-blend-mode: color-dodge;
-		filter: brightness(0.5);
+		filter: brightness(0.25);
 	}
 	.overlay {
 		background: var(--background);
