@@ -105,7 +105,6 @@
 		gap: 25px;
 		width: 100%;
 		position: relative;
-		margin-top: 100px;
 		padding-bottom: 50px;
 		opacity: 0;
 		transform: translateY(40px);

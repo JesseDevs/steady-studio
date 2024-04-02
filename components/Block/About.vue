@@ -18,6 +18,7 @@
 		<div class="big-block level-one-voice">
 			<p>The digital world is brimming with grand ideas...</p>
 			<p>We make them happen.</p>
+
 			<SvgSmallLogo class="small-box" />
 		</div>
 	</block-about>
@@ -88,10 +89,26 @@
 
 			p {
 				font-size: inherit;
+				position: relative;
 			}
 			p:nth-of-type(2) {
 				align-self: flex-end;
 			}
+		}
+
+		.svg-pos {
+			position: relative;
+			display: inline-block;
+		}
+
+		.svg-elipse {
+			width: 125px;
+			height: 150px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			opacity: 0;
 		}
 		.small-box {
 			position: absolute;

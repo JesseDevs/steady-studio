@@ -73,7 +73,7 @@
 				background-color: rgb(var(--brand-color-rgb) / 0.6);
 			}
 			&:nth-child(4) {
-				transform: translateX(-00%);
+				transform: translateX(-300%);
 				background-color: rgb(var(--brand-color-rgb) / 0.3);
 			}
 		}

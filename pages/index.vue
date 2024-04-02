@@ -1,6 +1,6 @@
 <template>
 	<main>
-		<GeneralContainer>
+		<GeneralContainer class="landing">
 			<BlockLanding />
 		</GeneralContainer>
 		<GeneralContainer class="about">
@@ -23,8 +23,4 @@
 	});
 </script>
 
-<style lang="scss" scoped>
-	// .about {
-	// 	background-color: var(--support-color);
-	// }
-</style>
+<style lang="scss" scoped></style>

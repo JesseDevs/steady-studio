@@ -8,4 +8,8 @@
 
 <script setup></script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+	.landing inner-column {
+		padding-top: calc(5rem + 100px);
+	}
+</style>
