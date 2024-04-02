@@ -92,7 +92,7 @@
 				opacity: 0;
 				display: block;
 				width: 100%;
-				padding: 8px 1.5rem;
+				padding: 10px 1.5rem;
 				font-weight: 600;
 				display: flex;
 				align-items: center;
@@ -159,11 +159,26 @@
 		z-index: 0;
 	}
 
+	.loading-link::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 100%;
+		width: 100%;
+		height: 100%;
+		background-color: rgb(var(--accent-color-rgb) / 0.5);
+		transition: left 0.3s ease-in;
+		z-index: 0;
+	}
+
 	.loading-link:hover {
 		svg {
 			opacity: 1 !important;
 		}
 		&:before {
+			left: 0;
+		}
+		&:after {
 			left: 0;
 		}
 	}

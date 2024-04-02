@@ -2,7 +2,7 @@
 	<header :class="` ${ui.menuClass} main-tool-bar site-header `">
 		<inner-column>
 			<nav class="main-menu animate-drop-in">
-				<SvgSteady />
+				<SvgSteady class="steady-logo" />
 				<button
 					class="hamburger-button icon-button"
 					@click="ui.toggleMainMenu"
@@ -19,8 +19,18 @@
 </template>
 
 <script setup>
+	import { gsap } from 'gsap';
 	import { useInterfaceService } from '~/services/InterfaceService';
 	const ui = useInterfaceService();
+
+	onMounted(() => {
+		const tl = gsap.timeline();
+
+		tl.to('.steady-logo', {
+			opacity: 1,
+			x: 0,
+		});
+	});
 </script>
 
 <style lang="scss">
@@ -30,8 +40,12 @@
 		top: 0;
 		width: 100%;
 		z-index: 9999;
-
 		background-color: var(--background);
+
+		.steady-logo {
+			opacity: 0;
+			transform: translateX(-40px);
+		}
 
 		inner-column {
 			padding: 1rem 1rem;

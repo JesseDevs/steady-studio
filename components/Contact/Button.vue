@@ -20,6 +20,12 @@
 		padding: 10px 20px;
 		border-radius: 7px;
 		font-weight: 600;
+		transition: background-color 0.3s ease-in-out;
+		max-width: 540px;
+
+		&:hover {
+			background-color: var(--hover-color);
+		}
 		svg {
 			stroke: var(--text);
 			stroke-width: 2px;
