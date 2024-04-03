@@ -29,7 +29,14 @@
 		tl.to('.steady-logo', {
 			opacity: 1,
 			x: 0,
-		});
+		}).to(
+			'.hamburger-button',
+			{
+				opacity: 1,
+				x: 0,
+			},
+			'<',
+		);
 	});
 </script>
 
@@ -72,6 +79,8 @@
 			width: 40px;
 			height: 40px;
 			position: relative;
+			opacity: 0;
+			transform: translateX(40px);
 
 			div.mbykw {
 				opacity: 0.7;

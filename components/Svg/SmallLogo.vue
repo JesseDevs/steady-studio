@@ -3,7 +3,7 @@
 		<svg
 			width="100%"
 			height="100%"
-			viewBox="0 0 45 45"
+			viewBox="0 0 42 39"
 			version="1.1"
 			xmlns="http://www.w3.org/2000/svg"
 			xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -16,15 +16,6 @@
 				stroke-miterlimit: 2;
 			"
 		>
-			<rect
-				class="Artboard1"
-				x="0"
-				y="0"
-				width="40"
-				height="40.199"
-				style="fill: none"
-			/>
-
 			<g class="logo-symbol">
 				<path
 					d="M13.753,7.43L36.606,20.629L30.989,11.281L18.963,4.335L13.753,7.43Z"
@@ -58,10 +49,10 @@
 	div {
 		display: flex;
 		align-items: flex-start;
-	}
-	svg {
 		max-width: 50px;
 		max-height: 50px;
+	}
+	svg {
 		.logo-symbol {
 			path {
 				transition: fill 0.2s ease-in-out;

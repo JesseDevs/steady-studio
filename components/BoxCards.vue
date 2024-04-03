@@ -58,23 +58,24 @@
 			justify-content: center;
 			--translate-value: calc(-100% + -1.6rem);
 			transform: translateX(-100%);
+			border-radius: 3px;
 
 			&:nth-child(1) {
 				transform: translateX(var(--translate-value));
-				background-color: rgb(var(--brand-color-rgb) / 0.8);
+				background-color: rgb(var(--brand-color-rgb) / 0.7);
 			}
 			&:nth-child(2) {
 				transform: translateX(var(--translate-value));
 
-				background-color: rgb(var(--brand-color-rgb) / 0.8);
+				background-color: rgb(var(--brand-color-rgb) / 0.6);
 			}
 			&:nth-child(3) {
 				transform: translateX(-200%);
-				background-color: rgb(var(--brand-color-rgb) / 0.6);
+				background-color: rgb(var(--brand-color-rgb) / 0.4);
 			}
 			&:nth-child(4) {
 				transform: translateX(-300%);
-				background-color: rgb(var(--brand-color-rgb) / 0.3);
+				background-color: rgb(var(--brand-color-rgb) / 0.2);
 			}
 		}
 	}

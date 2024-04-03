@@ -3,6 +3,9 @@
 		<GeneralContainer class="landing">
 			<BlockLanding />
 		</GeneralContainer>
+		<GeneralContainer class="work">
+			<BlockWork />
+		</GeneralContainer>
 		<GeneralContainer class="about">
 			<BlockAbout />
 		</GeneralContainer>

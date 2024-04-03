@@ -97,18 +97,19 @@
 	onMounted(() => {
 		const myAnimation = gsap.timeline();
 
-		myAnimation.timeScale(0.7);
+		myAnimation.timeScale(0.9);
 
 		myAnimation
 			.from('.outer-shell path', {
 				opacity: 0,
+				stagger: 0.2,
 			})
 			.from(
 				'.mid-shell path',
 				{
 					opacity: 0.2,
 					duration: 0.4,
-					stagger: 0.1,
+					stagger: 0.2,
 				},
 				'-=.27',
 			)

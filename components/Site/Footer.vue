@@ -1,8 +1,8 @@
 <template>
 	<footer class="site-footer small-voice">
-		<site-footer>
-			<div></div>
-		</site-footer>
+		<inner-column>
+			<p>footer</p>
+		</inner-column>
 	</footer>
 </template>
 

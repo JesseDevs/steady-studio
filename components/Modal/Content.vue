@@ -59,7 +59,7 @@
 		overflow: hidden;
 		border-bottom: var(--thin) solid rgb(var(--outline-color-rgb) / 0.5);
 
-		transition: top 0.3s ease-in-out, opacity 0.3s ease;
+		transition: top 0.3s cubic-bezier(0.165, 0.84, 0.44, 1), opacity 0.3s ease;
 
 		position: absolute;
 		top: -100%;
@@ -128,6 +128,7 @@
 
 	glass-container.menu-open {
 		modal-content {
+			transition: top 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
 			top: 0;
 		}
 		.modal-btns {

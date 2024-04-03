@@ -2,8 +2,8 @@
 	<block-title>
 		<GeneralTitle />
 		<p>
-			A studio built to craft compelling digital experiences that captivate
-			audiences and drive business growth.
+			A studio built to craft compelling websites that captivate audiences and drive
+			business growth.
 		</p>
 		<ContactButton />
 
@@ -26,6 +26,7 @@
 			delay: 0.3,
 			opacity: 1,
 			y: 0,
+			ease: 'power4.out',
 		});
 	});
 </script>

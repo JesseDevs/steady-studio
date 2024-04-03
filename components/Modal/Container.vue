@@ -1,6 +1,6 @@
 <template>
 	<ClientOnly>
-		<Teleport to="site-footer">
+		<Teleport to=".site-footer">
 			<glass-container
 				@click="handleModalContainerClick"
 				:class="`${ui.menuClass}`"
@@ -44,6 +44,6 @@
 	glass-container.menu-open {
 		opacity: 1;
 		pointer-events: auto;
-		transition: opacity 0.1s ease;
+		transition: opacity 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 	}
 </style>
