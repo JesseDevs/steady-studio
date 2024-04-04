@@ -22,6 +22,7 @@
 		font-weight: 600;
 		transition: background-color 0.3s ease-in-out;
 		max-width: 540px;
+		position: relative;
 
 		&:hover {
 			background-color: var(--hover-color);
@@ -32,6 +33,32 @@
 		}
 		span {
 			display: block;
+		}
+
+		&::before {
+			display: none;
+			content: '';
+			position: absolute;
+			right: -35px;
+			top: -35px;
+			width: 120px;
+			height: 120px;
+			border-radius: 50%;
+
+			background-color: var(--background);
+			pointer-events: none;
+			z-index: -10;
+			transition: background-color 0.4s ease-in-out;
+		}
+
+		&:hover:before {
+			background-color: var(--text);
+		}
+
+		@media (min-width: 500px) {
+			&:before {
+				display: block;
+			}
 		}
 	}
 </style>

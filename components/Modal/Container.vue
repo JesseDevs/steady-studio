@@ -44,6 +44,6 @@
 	glass-container.menu-open {
 		opacity: 1;
 		pointer-events: auto;
-		transition: opacity 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+		transition: opacity 0.2s cubic-bezier(0.54, -0.01, 0.44, 0.73);
 	}
 </style>

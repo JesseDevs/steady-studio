@@ -7,12 +7,9 @@
 		</p>
 		<ContactButton />
 
-		<div class="test">
-			<div class="test-div"></div>
-			<div class="support-div"></div>
-			<div class="third-div"></div>
+		<picture class="video-container">
 			<video autoplay muted loop playsinline :src="vidSource"></video>
-		</div>
+		</picture>
 	</block-title>
 </template>
 <script setup>
@@ -32,69 +29,6 @@
 </script>
 
 <style lang="scss" scoped>
-	div.test {
-		background-color: var(--background);
-		position: absolute;
-		left: 490px;
-		top: -140px;
-		right: -20px;
-		height: calc(100% + 90px);
-		z-index: -10;
-		border-radius: 7px;
-		overflow: hidden;
-
-		div.test-div {
-			background-color: var(--accent-color);
-			// background: radial-gradient(
-			// 	circle,
-			// 	rgba(107, 130, 166, 1) 0%,
-			// 	rgba(53, 119, 154, 1) 100%
-			// );
-			position: absolute;
-
-			right: 0;
-			top: 0;
-			width: 100%;
-			border-radius: 10px;
-			border-bottom-right-radius: 0px;
-			height: calc(100% - 60px);
-		}
-		div.third-div {
-			background-color: var(--accent-color);
-			position: absolute;
-			left: 30px;
-			bottom: 20px;
-			height: 10px;
-			width: 50px;
-			border-radius: 10px;
-			border-bottom-right-radius: 0px;
-			height: 40px;
-		}
-		div.support-div {
-			background-color: var(--accent-color);
-			position: absolute;
-
-			right: 0;
-			bottom: 0;
-
-			width: calc(100% - 60px);
-			border-radius: 7px;
-			height: 70px;
-		}
-
-		&:after {
-			content: '';
-
-			position: absolute;
-			left: 0;
-			bottom: 0;
-			width: 60px;
-			height: 60px;
-			background-color: var(--background);
-
-			border-top-right-radius: 7px;
-		}
-	}
 	brand-block {
 		width: 100%;
 		display: inline;
@@ -109,6 +43,7 @@
 		padding-bottom: 50px;
 		opacity: 0;
 		transform: translateY(40px);
+
 		p {
 			max-width: 30ch;
 		}
@@ -120,10 +55,21 @@
 		}
 	}
 
-	video {
+	picture.video-container {
+		border-radius: 10px;
+		overflow: hidden;
 		position: absolute;
+		left: 490px;
+		right: 0;
+		top: -75px;
+		max-width: 50vw;
+		height: calc(100% + 25px);
+		background-color: var(--accent-color);
+		z-index: -20;
+	}
 
-		border-radius: 7px;
+	video {
+		border-radius: 10px;
 		object-fit: cover;
 		mix-blend-mode: color-dodge;
 		filter: brightness(0.25);

@@ -44,7 +44,8 @@
 		gap: 1.6rem;
 		position: absolute;
 		z-index: -1;
-		top: 50%;
+		top: 47%;
+
 		left: -45%;
 		transform: translate(0%, -50%);
 

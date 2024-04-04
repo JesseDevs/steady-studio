@@ -16,7 +16,7 @@
 				stroke-miterlimit: 2;
 			"
 		>
-			<g class="logo-symbol">
+			<g class="small-logo-symbol">
 				<path
 					d="M13.753,7.43L36.606,20.629L30.989,11.281L18.963,4.335L13.753,7.43Z"
 				/>
@@ -53,7 +53,7 @@
 		max-height: 50px;
 	}
 	svg {
-		.logo-symbol {
+		.small-logo-symbol {
 			path {
 				transition: fill 0.2s ease-in-out;
 				fill: rgb(var(--text-rgb) / 0.9);

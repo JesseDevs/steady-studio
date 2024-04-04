@@ -1,7 +1,7 @@
 <template>
 	<block-work>
 		<text-content>
-			<h2 class="level-two-voice">Our Services</h2>
+			<h2 class="level-two-voice">Our Work</h2>
 			<p>
 				We're storytellers who immerse ourselves in your brand's narrative. We
 				believe in crafting digital experiences that resonate deeply with your
@@ -45,7 +45,9 @@
 	</block-work>
 </template>
 
-<script setup></script>
+<script setup>
+	import { gsap } from 'gsap';
+</script>
 
 <style lang="scss" scoped>
 	block-work {
@@ -63,14 +65,18 @@
 				text-transform: uppercase;
 				font-weight: 600;
 			}
+			p {
+				margin: 0 auto;
+			}
 		}
 
 		ul {
 			padding-top: 40px;
 			width: 100%;
-			display: flex;
-			flex-direction: column;
-			gap: 10px;
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+
+			grid-gap: 20px;
 		}
 
 		block-card {
@@ -81,10 +87,12 @@
 			align-items: center;
 			position: relative;
 			background-color: rgb(169 173 219);
-			height: 250px;
+			height: 350px;
 			width: 100%;
 			border-radius: 20px;
 			padding: 12px;
+
+			z-index: 20;
 
 			&::before {
 				content: '';
@@ -99,26 +107,13 @@
 				pointer-events: none;
 				z-index: 0;
 			}
-			&::after {
-				content: '';
-				position: absolute;
-				bottom: 0;
-				left: 0;
-				width: 100%;
-				height: 50px;
-				border-radius: 20px;
-				z-index: 1;
-
-				background-color: rgb(169 173 219);
-				pointer-events: none;
-			}
 
 			card-menu {
 				display: flex;
 				justify-content: space-between;
 				align-items: center;
 				position: absolute;
-				z-index: 1;
+				z-index: 999;
 
 				top: 40px;
 				left: 50%;
@@ -126,11 +121,17 @@
 				width: 90%;
 				padding: 10px 20px;
 
-				background: rgba(255, 255, 255, 0.15);
+				background: rgb(var(--accent-color-rgb) / 0.6);
 				box-shadow: 0 8px 32px 0px rgb(var(--accent-color-rgb) / 0.3);
-				backdrop-filter: blur(3px);
+				backdrop-filter: blur(4px);
 				border-radius: 10px;
 				border: 1px solid rgba(255, 255, 255, 0.18);
+				cursor: pointer;
+				transition: background-color 0.3s ease-in-out;
+
+				&:hover {
+					background: rgb(var(--accent-color-rgb) / 1);
+				}
 
 				p {
 					font-weight: 500;
@@ -150,6 +151,31 @@
 					}
 				}
 			}
+		}
+
+		li:nth-of-type(1) block-card {
+			background: url('/image-2.jpg');
+			background-size: cover;
+			background-position: center;
+			z-index: 24;
+		}
+		li:nth-of-type(2) block-card {
+			background: url('/image-1.jpg');
+			background-size: cover;
+			background-position: center;
+			z-index: 23;
+		}
+		li:nth-of-type(3) block-card {
+			background: url('/image-4.jpg');
+			background-size: cover;
+			background-position: center;
+			z-index: 22;
+		}
+		li:nth-of-type(4) block-card {
+			background: url('/image-5.jpg');
+			background-size: cover;
+			background-position: center;
+			z-index: 21;
 		}
 	}
 </style>

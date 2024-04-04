@@ -3,7 +3,18 @@
 		<nav>
 			<ul class="modal-btns">
 				<li>
-					<NuxtLink class="level-one-voice" to="/">
+					<NuxtLink class="level-one-voice" to="/"
+						>Home
+
+						<Icon name="ph:arrow-circle-down-right-light" size="30" />
+					</NuxtLink>
+				</li>
+				<li>
+					<NuxtLink
+						class="level-one-voice"
+						to="#about-block"
+						@click="ui.closeMenu"
+					>
 						About
 						<Icon name="ph:arrow-circle-down-right-light" size="30" />
 					</NuxtLink>
@@ -53,11 +64,15 @@
 		justify-content: space-between;
 		width: 100%;
 		// max-width: 360px;
-		height: 40%;
+		height: 44%;
 		min-height: 30vh;
+		border-bottom-left-radius: 10px;
+		border-bottom-right-radius: 10px;
+		border-bottom: 1px solid red;
 
 		overflow: hidden;
-		border-bottom: var(--thin) solid rgb(var(--outline-color-rgb) / 0.5);
+		border-bottom: 2px solid rgb(var(--brand-color-rgb) / 0.5);
+		box-shadow: 0 2px 5px rgb(var(--brand-color-rgb) / 0.3);
 
 		transition: top 0.3s cubic-bezier(0.165, 0.84, 0.44, 1), opacity 0.3s ease;
 

@@ -1,5 +1,5 @@
 <template>
-	<block-about ref="aboutBlock">
+	<block-about ref="aboutBlock" id="about-block">
 		<BoxCards />
 		<text-content>
 			<p>
@@ -29,6 +29,35 @@
 </script>
 
 <style lang="scss" scoped>
+	@keyframes ball-animate {
+		0% {
+			transform: translateY(50px) scale(0.1) rotate(0deg);
+			opacity: 0;
+		}
+		10% {
+			opacity: 1;
+		}
+		50% {
+			transform: translateY(-30px) scale(1) rotate(360deg);
+		}
+		100% {
+			transform: translateY(0) scale(1);
+			bottom: 15px;
+		}
+	}
+
+	@keyframes ball-delay {
+		0% {
+			opacity: 1;
+			transform: scale(1);
+		}
+
+		100% {
+			opacity: 0;
+			transform: scale(0);
+		}
+	}
+
 	block-about {
 		display: flex;
 		flex-direction: column;
@@ -46,8 +75,9 @@
 			justify-content: center;
 			width: 100%;
 			position: relative;
-			padding-top: 60px;
+
 			gap: 20px;
+			min-height: 370px;
 		}
 
 		.bg-highlight {
@@ -56,15 +86,16 @@
 
 		.big-block {
 			background-color: var(--brand-color);
-			margin-top: 50px;
+			margin-top: 13vh;
 			padding: 15px;
 			display: flex;
 			flex-direction: column;
 			font-weight: 800;
 			border-radius: 7px;
-			gap: 20px;
+			gap: 50px;
 			text-transform: uppercase;
 			overflow: hidden;
+			position: relative;
 
 			p {
 				font-size: inherit;
@@ -89,6 +120,9 @@
 			left: 15px;
 			bottom: 15px;
 			opacity: 1;
+
+			animation: ball-animate 3s alternate;
+			animation-iteration-count: 2.8;
 		}
 	}
 </style>
