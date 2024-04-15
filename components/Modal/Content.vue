@@ -3,7 +3,7 @@
 		<nav>
 			<ul class="modal-btns">
 				<li>
-					<NuxtLink class="level-one-voice" to="/"
+					<NuxtLink class="level-one-voice" @click="ui.closeMenu" to="/"
 						>Home
 
 						<Icon name="ph:arrow-circle-down-right-light" size="30" />
@@ -20,14 +20,14 @@
 					</NuxtLink>
 				</li>
 				<li>
-					<NuxtLink class="level-one-voice" to="/"
+					<NuxtLink class="level-one-voice" @click="ui.closeMenu" to="/"
 						>Services
 
 						<Icon name="ph:arrow-circle-down-right-light" size="30" />
 					</NuxtLink>
 				</li>
 				<li>
-					<NuxtLink class="level-one-voice" to="/"
+					<NuxtLink class="level-one-voice" @click="ui.closeMenu" to="/"
 						>Projects
 
 						<Icon name="ph:arrow-circle-down-right-light" size="30" />
@@ -35,7 +35,10 @@
 				</li>
 
 				<li>
-					<NuxtLink class="level-one-voice loading-link" to="/"
+					<NuxtLink
+						class="level-one-voice loading-link"
+						@click="ui.closeMenu"
+						to="/#contact"
 						><span>Get in touch</span>
 						<Icon
 							name="material-symbols-light:arrow-outward-rounded"

@@ -3,11 +3,14 @@
 		<GeneralContainer class="landing">
 			<BlockLanding />
 		</GeneralContainer>
-		<GeneralContainer class="work">
+		<!-- <GeneralContainer class="work">
 			<BlockWork />
-		</GeneralContainer>
+		</GeneralContainer> -->
 		<GeneralContainer class="about">
 			<BlockAbout />
+		</GeneralContainer>
+		<GeneralContainer class="contact" id="contact">
+			<BlockContact />
 		</GeneralContainer>
 	</main>
 </template>

@@ -19,7 +19,7 @@
 	const { width, height } = useWindowSize();
 
 	const spanHeight = computed(() => {
-		return width.value > 498 && width.value !== Infinity ? '115.2' : '67.2';
+		return width.value > 498 && width.value !== Infinity ? '115.2' : '115.2';
 	});
 
 	onMounted(() => {
@@ -125,6 +125,10 @@
 				},
 			);
 	});
+
+	watchEffect(() => {
+		spanHeight.value = width.value > 498 && width.value !== Infinity ? 115.2 : 67.2;
+	});
 </script>
 
 <style lang="scss" scoped>
@@ -155,8 +159,10 @@
 
 	.logo-container {
 		position: absolute;
-		top: -125px;
-		right: -250px;
+		top: -70px;
+		left: 130%;
+		min-width: 150px;
+		min-height: 150px;
 
 		@media (min-width: 500px) {
 			top: -75px;

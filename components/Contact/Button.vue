@@ -1,6 +1,6 @@
 <template>
-	<NuxtLink to="/">
-		<span>Let's Talk</span>
+	<NuxtLink :to="location">
+		<span>{{ btnText }}</span>
 		<Icon
 			name="material-symbols-light:arrow-outward-rounded"
 			size="30"
@@ -9,7 +9,12 @@
 	</NuxtLink>
 </template>
 
-<script setup></script>
+<script setup>
+	const props = defineProps({
+		btnText: String,
+		location: String,
+	});
+</script>
 
 <style lang="scss" scoped>
 	a {
@@ -33,32 +38,6 @@
 		}
 		span {
 			display: block;
-		}
-
-		&::before {
-			display: none;
-			content: '';
-			position: absolute;
-			right: -35px;
-			top: -35px;
-			width: 120px;
-			height: 120px;
-			border-radius: 50%;
-
-			background-color: var(--background);
-			pointer-events: none;
-			z-index: -10;
-			transition: background-color 0.4s ease-in-out;
-		}
-
-		&:hover:before {
-			background-color: var(--text);
-		}
-
-		@media (min-width: 500px) {
-			&:before {
-				display: block;
-			}
 		}
 	}
 </style>

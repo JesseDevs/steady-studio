@@ -1,5 +1,5 @@
 :root {
-	--text-xs: 1.3rem;
+	--text-2xs: 1.3rem;
 	--text-xs: 1.6rem;
 	--text-sm: 1.8rem;
 	--text-md: 2.2rem;
@@ -30,6 +30,9 @@
 p,
 li,
 a,
+label,
+input,
+textarea,
 button {
 	font-size: var(--text-sm);
 }

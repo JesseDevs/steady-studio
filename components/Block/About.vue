@@ -15,12 +15,12 @@
 			</p>
 		</text-content>
 
-		<div class="big-block level-one-voice">
+		<!-- <div class="big-block level-one-voice">
 			<p>The digital world is brimming with grand ideas...</p>
 			<p class="align-right">We make them happen.</p>
 
 			<SvgSmallLogo class="small-box" />
-		</div>
+		</div> -->
 	</block-about>
 </template>
 
@@ -72,7 +72,7 @@
 			display: flex;
 			flex-direction: column;
 			align-items: center;
-			justify-content: center;
+			// justify-content: center;
 			width: 100%;
 			position: relative;
 
@@ -82,6 +82,7 @@
 
 		.bg-highlight {
 			background-color: var(--hover-color);
+			// font-size: calc(var(--text-sm) + 3px);
 		}
 
 		.big-block {

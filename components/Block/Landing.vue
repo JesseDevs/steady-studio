@@ -5,11 +5,7 @@
 			A studio built to craft compelling websites that captivate audiences and drive
 			business growth.
 		</p>
-		<ContactButton />
-
-		<picture class="video-container">
-			<video autoplay muted loop playsinline :src="vidSource"></video>
-		</picture>
+		<ContactButton btnText="Let’s Talk" location="/#contact" />
 	</block-title>
 </template>
 <script setup>
@@ -53,31 +49,6 @@
 				margin-left: 3em;
 			}
 		}
-	}
-
-	picture.video-container {
-		border-radius: 10px;
-		overflow: hidden;
-		position: absolute;
-		left: 490px;
-		right: 0;
-		top: -75px;
-		max-width: 50vw;
-		height: calc(100% + 25px);
-		background-color: var(--accent-color);
-		z-index: -20;
-	}
-
-	video {
-		border-radius: 10px;
-		object-fit: cover;
-		mix-blend-mode: color-dodge;
-		filter: brightness(0.25);
-	}
-	.overlay {
-		background: var(--background);
-
-		background: radial-gradient(at center, #633a8b4d, rgb(var(--background-rgb) / 1));
 	}
 
 	@media (min-width: 800px) {
