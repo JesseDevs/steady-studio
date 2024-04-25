@@ -25,7 +25,7 @@
 			start: 'top bottom',
 			end: 'bottom top',
 			scrub: true,
-			markers: true,
+
 			onToggle: (self) => {
 				if (self.direction === 1) {
 					// Scroll down

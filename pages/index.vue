@@ -30,6 +30,7 @@
 			ScrollTrigger.create({
 				trigger: box,
 				animation: anim,
+				start: 'top+=50 center',
 				toggleActions: 'play none none none',
 				once: true,
 			});
