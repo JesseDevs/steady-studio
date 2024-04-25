@@ -1,11 +1,13 @@
 <template>
 	<NuxtLink :to="location">
 		<span>{{ btnText }}</span>
-		<Icon
-			name="material-symbols-light:arrow-outward-rounded"
-			size="30"
-			class="icon"
-		/>
+		<ClientOnly>
+			<Icon
+				name="material-symbols-light:arrow-outward-rounded"
+				size="30"
+				class="icon"
+			/>
+		</ClientOnly>
 	</NuxtLink>
 </template>
 
@@ -28,12 +30,14 @@
 		transition: background-color 0.3s ease-in-out;
 		max-width: 540px;
 		position: relative;
+		min-height: 50px;
+		color: var(--btn-color);
 
 		&:hover {
 			background-color: var(--hover-color);
 		}
 		svg {
-			stroke: var(--text);
+			stroke: var(--btn-color);
 			stroke-width: 2px;
 		}
 		span {

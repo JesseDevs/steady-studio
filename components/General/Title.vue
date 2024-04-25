@@ -18,9 +18,7 @@
 	import { useWindowSize } from '@vueuse/core';
 	const { width, height } = useWindowSize();
 
-	const spanHeight = computed(() => {
-		return width.value > 498 && width.value !== Infinity ? '115.2' : '115.2';
-	});
+	const spanHeight = ref('115.2');
 
 	onMounted(() => {
 		const tl = gsap.timeline({ repeat: -1 });

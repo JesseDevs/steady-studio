@@ -1,31 +1,39 @@
 <template>
 	<main>
 		<GeneralContainer class="landing">
-			<BlockLanding />
+			<BlockLanding class="box-block" />
 		</GeneralContainer>
-		<!-- <GeneralContainer class="work">
-			<BlockWork />
-		</GeneralContainer> -->
-		<GeneralContainer class="about">
-			<BlockAbout />
+
+		<GeneralContainer class="about" id="about">
+			<BlockAbout class="box-block" />
 		</GeneralContainer>
 		<GeneralContainer class="contact" id="contact">
-			<BlockContact />
+			<BlockContact class="box-block" />
 		</GeneralContainer>
 	</main>
 </template>
 
 <script setup>
 	import { gsap } from 'gsap';
-	// const myElement = ref(null);
+	import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 	onMounted(() => {
-		// const myAnimation = gsap.timeline();
-		// myAnimation.from(myElement.value, {
-		// 	opacity: 0,
-		// 	duration: 2,
-		// 	ease: 'power2.out',
-		// });
+		gsap.registerPlugin(ScrollTrigger);
+		const boxes = gsap.utils.toArray('.box-block');
+
+		boxes.forEach((box, i) => {
+			const anim = gsap.fromTo(
+				box,
+				{ autoAlpha: 0, y: 50 },
+				{ duration: 1, autoAlpha: 1, y: 0 },
+			);
+			ScrollTrigger.create({
+				trigger: box,
+				animation: anim,
+				toggleActions: 'play none none none',
+				once: true,
+			});
+		});
 	});
 </script>
 

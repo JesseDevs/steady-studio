@@ -26,6 +26,24 @@
 
 <script setup>
 	import { gsap } from 'gsap';
+	import { ScrollTrigger } from 'gsap/ScrollTrigger';
+	onMounted(() => {
+		gsap.registerPlugin(ScrollTrigger);
+		const tl = gsap.timeline({
+			scrollTrigger: {
+				trigger: '#about-block',
+
+				start: '-20% 80%',
+				end: '-50% top',
+				scrub: true,
+			},
+		});
+
+		tl.to('box-cards div:nth-child(1)', { x: '0%', ease: 'power3.out' }, 0)
+			.to('box-cards div:nth-child(2)', { x: '0%', ease: 'power3.out' }, 0.1)
+			.to('box-cards div:nth-child(3)', { x: '0%', ease: 'power3.out' }, 0.2)
+			.to('box-cards div:nth-child(4)', { x: '0%', ease: 'power3.out' }, 0.3);
+	});
 </script>
 
 <style lang="scss" scoped>
@@ -65,7 +83,7 @@
 		justify-content: center;
 		width: 100%;
 		position: relative;
-
+		padding-top: 50px;
 		gap: 20px;
 
 		text-content {
@@ -83,6 +101,23 @@
 		.bg-highlight {
 			background-color: var(--hover-color);
 			// font-size: calc(var(--text-sm) + 3px);
+			position: relative;
+			&:before {
+				display: none;
+				background-color: var(--hover-color);
+				content: '';
+				position: absolute;
+				left: -237%;
+				top: 0;
+				width: 237%;
+				height: 100%;
+			}
+
+			@media (min-width: 500px) {
+				&:before {
+					display: block;
+				}
+			}
 		}
 
 		.big-block {

@@ -83,7 +83,7 @@
 			transform: translateX(40px);
 
 			div.mbykw {
-				opacity: 0.7;
+				opacity: 0.9;
 				justify-content: center;
 				align-items: center;
 

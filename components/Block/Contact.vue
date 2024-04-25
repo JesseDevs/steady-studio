@@ -64,11 +64,28 @@ Let’s talk..."
 		// justify-content: center;
 		width: 100%;
 		position: relative;
+		padding-bottom: 80px;
 
 		gap: 20px;
 
 		h3 {
 			font-weight: 700;
+			position: relative;
+
+			overflow: hidden;
+
+			&:before {
+				content: '';
+				display: block;
+				position: absolute;
+				width: 100%;
+
+				height: 2px;
+				background-color: var(--accent-color);
+				top: 50%;
+				left: 90%;
+				transform: translate(-50%, -50%);
+			}
 		}
 
 		form {

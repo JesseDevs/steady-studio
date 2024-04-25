@@ -10,16 +10,12 @@
 					</NuxtLink>
 				</li>
 				<li>
-					<NuxtLink
-						class="level-one-voice"
-						to="#about-block"
-						@click="ui.closeMenu"
-					>
+					<NuxtLink class="level-one-voice" to="#about" @click="ui.closeMenu">
 						About
 						<Icon name="ph:arrow-circle-down-right-light" size="30" />
 					</NuxtLink>
 				</li>
-				<li>
+				<!-- <li>
 					<NuxtLink class="level-one-voice" @click="ui.closeMenu" to="/"
 						>Services
 
@@ -32,7 +28,7 @@
 
 						<Icon name="ph:arrow-circle-down-right-light" size="30" />
 					</NuxtLink>
-				</li>
+				</li> -->
 
 				<li>
 					<NuxtLink
@@ -67,7 +63,7 @@
 		justify-content: space-between;
 		width: 100%;
 		// max-width: 360px;
-		height: 44%;
+		height: 30%;
 		min-height: 30vh;
 		border-bottom-left-radius: 10px;
 		border-bottom-right-radius: 10px;

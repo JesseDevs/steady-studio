@@ -7,35 +7,7 @@
 	</box-cards>
 </template>
 
-<script setup>
-	import { gsap } from 'gsap';
-
-	onMounted(() => {
-		const tl = gsap.timeline();
-
-		tl.to(
-			'box-cards div:nth-child(1)',
-			{ x: '0%', duration: 1, ease: 'power3.out' },
-
-			'<',
-		)
-			.to(
-				'box-cards div:nth-child(2)',
-				{ x: '0%', duration: 1, ease: 'power3.out' },
-				0.2,
-			)
-			.to(
-				'box-cards div:nth-child(3)',
-				{ x: '0%', duration: 1, ease: 'power3.out' },
-				0.4,
-			)
-			.to(
-				'box-cards div:nth-child(4)',
-				{ x: '0%', duration: 1, ease: 'power3.out' },
-				0.6,
-			);
-	});
-</script>
+<script setup></script>
 
 <style lang="scss" scoped>
 	box-cards {

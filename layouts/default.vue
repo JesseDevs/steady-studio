@@ -1,12 +1,13 @@
 <template>
 	<div class="app-container">
-		<LazyModalContainer />
+		<ModalContainer />
+
 		<Space />
 		<SiteNav />
 
 		<slot />
 
-		<SiteFooter />
+		<SiteFooter id="footer" />
 	</div>
 </template>
 
@@ -14,7 +15,45 @@
 	import { useInterfaceService } from '~/services/InterfaceService';
 	const ui = useInterfaceService();
 
-	onMounted(() => {});
+	import { gsap } from 'gsap';
+	import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+	onMounted(() => {
+		gsap.registerPlugin(ScrollTrigger);
+		ScrollTrigger.create({
+			trigger: 'footer-block',
+			start: 'top bottom',
+			end: 'bottom top',
+			scrub: true,
+			markers: true,
+			onToggle: (self) => {
+				if (self.direction === 1) {
+					// Scroll down
+					document.documentElement.style.setProperty(
+						'--background',
+						'rgb(250 250 250)',
+					);
+					document.documentElement.style.setProperty('--text', 'rgb(13 15 15)');
+					document.documentElement.style.setProperty('--text-rgb', '13 15 15');
+					document.documentElement.style.setProperty(
+						'--accent-color',
+						'var(--brand-color)',
+					);
+					document.documentElement.style.setProperty(
+						'--accent-color-rgb',
+						'var(--brand-color-rgb)',
+					);
+				} else {
+					// Scroll up
+					document.documentElement.style.setProperty('--background', '');
+					document.documentElement.style.setProperty('--text', '');
+					document.documentElement.style.setProperty('--text-rgb', '');
+					document.documentElement.style.setProperty('--accent-color-rgb', '');
+					document.documentElement.style.setProperty('--accent-color', '');
+				}
+			},
+		});
+	});
 </script>
 
 <style lang="scss">
