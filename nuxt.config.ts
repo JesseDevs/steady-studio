@@ -22,12 +22,12 @@ export default defineNuxtConfig({
 				{
 					hid: 'og:title',
 					property: 'og:title',
-					content: 'Steady Studio: Web Design',
+					content: 'Steady Studio - Web Design',
 				},
 				{
 					hid: 'og-image',
 					property: 'og:image',
-					content: '/images/thumbnail.png',
+					content: '/image-2.png',
 				},
 				{
 					name: 'keywords',
