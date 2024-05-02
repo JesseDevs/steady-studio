@@ -5,7 +5,7 @@ export default defineNuxtConfig({
 	app: {
 		pageTransition: { name: 'page', mode: 'out-in' },
 		head: {
-			title: 'Steady Web Agency',
+			title: 'Steady Studio',
 
 			meta: [
 				{ charset: 'utf-8' },
@@ -17,12 +17,12 @@ export default defineNuxtConfig({
 					hid: 'og:description',
 					property: 'og:description',
 					content:
-						'Join Echo, a place where thoughts are not just spoken, but reverberate across the digital landscape. Whether you’re sharing a personal journey, discussing important issues, or simply expressing yourself, this is your platform to make your voice heard.',
+						'Where creativity meets functionality. Crafting exceptional web experiences to elevate your brand.',
 				},
 				{
 					hid: 'og:title',
 					property: 'og:title',
-					content: 'Echo: Where Thoughts Resound',
+					content: 'Steady Studio: Web Design',
 				},
 				{
 					hid: 'og-image',
@@ -32,11 +32,28 @@ export default defineNuxtConfig({
 				{
 					name: 'keywords',
 					content:
-						'Nuxt.js, Vue.js, Porfolio, web development, Javascript, front-end',
+						'Nuxt.js, Vue.js, freelance, creative, web development, Javascript, front-end',
 				},
 				{
-					name: 'twitter:card',
-					content: 'icon.jpg',
+					hid: 'twitter:url',
+					name: 'twitter:url',
+					content: `https://steady-six.vercel.app/`,
+				},
+				{
+					hid: 'twitter:title',
+					name: 'twitter:title',
+					content: 'Steady Studio: Web Design',
+				},
+				{
+					hid: 'twitter:description',
+					name: 'twitter:description',
+					content:
+						'Where creativity meets functionality. Crafting exceptional web experiences to elevate your brand.',
+				},
+				{
+					hid: 'twitter:image',
+					name: 'twitter:image',
+					content: '/images/thumbnail.png',
 				},
 				{
 					hid: 'og-type',
@@ -46,7 +63,7 @@ export default defineNuxtConfig({
 				{
 					hid: 'og:url',
 					property: 'og:url',
-					content: `https://echo-waves.vercel.app/`,
+					content: `https://steady-six.vercel.app/`,
 				},
 				{
 					property: 'og:locale',
