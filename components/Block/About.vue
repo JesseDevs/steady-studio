@@ -95,7 +95,7 @@
 			position: relative;
 
 			gap: 20px;
-			min-height: 370px;
+			min-height: 290px;
 		}
 
 		.bg-highlight {
