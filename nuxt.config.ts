@@ -27,7 +27,7 @@ export default defineNuxtConfig({
 				{
 					hid: 'og-image',
 					property: 'og:image',
-					content: '/image-2.png',
+					content: '/image-2.jpg',
 				},
 				{
 					name: 'keywords',
@@ -42,7 +42,7 @@ export default defineNuxtConfig({
 				{
 					hid: 'twitter:title',
 					name: 'twitter:title',
-					content: 'Steady Studio: Web Design',
+					content: 'Steady Studio - Web Design',
 				},
 				{
 					hid: 'twitter:description',
@@ -53,7 +53,7 @@ export default defineNuxtConfig({
 				{
 					hid: 'twitter:image',
 					name: 'twitter:image',
-					content: '/images/thumbnail.png',
+					content: '/image-2.jpg',
 				},
 				{
 					hid: 'og-type',
